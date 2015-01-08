@@ -9,11 +9,11 @@
 #include <netinet/in.h> /* needed for sockaddr */
 #include <errno.h> /* for error handling */
 
-#define BUFLEN 512 /* max length of buffer */
+#define BUFSIZE 512 /* max length of buffer */
 #define PORT 3000
 #define DHCP_LEASES_FILE "/var/lib/dhcp/dhcpd.leases"
 /* posix regex requies backslash before curly brackets*/
-#define IP_REGEX "[0-9]\\{1,3\\}\\.[0-9]\\{1,3\\}\\.[0-9]\\{1,3\\}\\.[0-9]\\{1,3\\}"
+#define IP_REGEX "[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}"
 
 
 
@@ -45,6 +45,19 @@ int check_socket_error(int fd);
 /// </remark>
 int get_leased_ips(char **ips, unsigned int *ips_len);
 
-
+/// <summary>
+/// Get active client list
+/// </summary>
+/// <param name="ips">ip addresses that are active (will be returned)</param
+/// <param name="ips_len">length of ips array</param
+/// <returns>
+/// 0 - there were no problems retrieving active ips
+/// 1 - no active clients
+/// 2 - problem retrieving clients
+/// </returns>
+/// <remarks>
+/// Prints perrors inside
+/// </remarks>
+int get_client_ips(char **ips, unsigned int *ips_len);
 
 #endif

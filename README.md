@@ -13,6 +13,7 @@ Requirements
  - A WiFi dongle capable of being an [Access Point](http://en.wikipedia.org/wiki/Wireless_access_point). For officially tested and supported list [see this](http://elinux.org/RPi_VerifiedPeripherals#USB_Wi-Fi_Adapters);
  - SD card equiped with Linux;
  - [PiCAN CAN-Bus board](http://skpang.co.uk/catalog/pican-canbus-board-for-raspberry-pi-p-1196.html)
+ - ping utility (software)
 
 Setup
 =====
