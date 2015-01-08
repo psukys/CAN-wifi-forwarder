@@ -13,6 +13,7 @@ Requirements
  - A WiFi dongle capable of being an [Access Point](http://en.wikipedia.org/wiki/Wireless_access_point). For officially tested and supported list [see this](http://elinux.org/RPi_VerifiedPeripherals#USB_Wi-Fi_Adapters);
  - SD card equiped with Linux;
  - [PiCAN CAN-Bus board](http://skpang.co.uk/catalog/pican-canbus-board-for-raspberry-pi-p-1196.html)
+
 Setup
 =====
 
@@ -20,4 +21,4 @@ Setup
 
  - Setup your Raspberry Pi as an access point. For starters, this guide fits well [Setting up a Raspberry Pi as a WiFi access point](https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point);
  - In projects folder execute `make` to get compiled executables.
- - Run it
+ - Run it!
