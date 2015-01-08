@@ -43,7 +43,7 @@ int check_socket_error(int fd);
 /// <remarks>
 /// Uses DHCPLEASES definition and prints perrors inside
 /// </remark>
-int get_leased_ips(char **ips, unsigned int *ips_len);
+int get_leased_ips(char ***ips, unsigned int *ips_len);
 
 /// <summary>
 /// Get active client list
@@ -58,7 +58,7 @@ int get_leased_ips(char **ips, unsigned int *ips_len);
 /// <remarks>
 /// Prints perrors inside
 /// </remarks>
-int get_client_ips(char **ips, unsigned int *ips_len);
+int get_client_ips(char ***ips, unsigned int *ips_len);
 
 
 /// <summary>
@@ -81,15 +81,6 @@ int ping_ip(char * ip);
 /// 0 - element removed successfully
 /// 1 - failed to remove element
 /// </returns
-int string_matrix_remove_elem(char **mat, unsigned int *size, int ind);
+int string_matrix_remove_elem(char ***mat, unsigned int *size, int ind);
 
-void print_strings(char **arr, unsigned int *size)
-{
-    int i = 0;
-    printf("length: %d\n", (*size));
-    for ( i = 0; i < (*size); i++)
-    {
-        printf("%d: %s\n", i, arr[i]);
-    }
-}
 #endif
