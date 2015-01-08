@@ -60,4 +60,36 @@ int get_leased_ips(char **ips, unsigned int *ips_len);
 /// </remarks>
 int get_client_ips(char **ips, unsigned int *ips_len);
 
+
+/// <summary>
+/// Ping a specific IP
+/// </summary>
+/// <param name="ip">ip address of the form 0.0.0.0-255.255.255.255</param>
+/// <returns>
+/// 0 - the ip pinged back
+/// 1 - the ip did not ping back
+/// 2 - error while trying to ping
+/// </returns>
+int ping_ip(char * ip);
+
+/// <summary>
+/// Removes an element from a string matrix (char**)
+/// </summary>
+/// <param name="mat">string matrix</param>
+/// <param name="i">index of the element to be removed</param>
+/// <returns>
+/// 0 - element removed successfully
+/// 1 - failed to remove element
+/// </returns
+int string_matrix_remove_elem(char **mat, unsigned int *size, int ind);
+
+void print_strings(char **arr, unsigned int *size)
+{
+    int i = 0;
+    printf("length: %d\n", (*size));
+    for ( i = 0; i < (*size); i++)
+    {
+        printf("%d: %s\n", i, arr[i]);
+    }
+}
 #endif

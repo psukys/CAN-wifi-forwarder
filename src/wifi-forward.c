@@ -1,5 +1,48 @@
 #include "wifi-forward.h"
 
+int ping_ip(char *ip)
+{
+    return 0;
+}
+
+int string_matrix_remove_elem(char **mat, unsigned int *size, int ind)
+{
+    /* unfortunately char elements are in CONST_DATA section, ref:
+    stackoverflow.com/questions/12290892/how-to-clear-a-char-passed-to-a-function-in-c
+    */
+
+    int i;
+    if (size > 0)
+    {
+        --(*size);
+    }
+    else
+    /* Only link exists */
+    {
+        free(mat);
+        return 0;
+    }
+    char **new_array = (char **) malloc((*size) * sizeof(*new_array));
+    for (i = 0; i < (*size); i++)
+    {
+        if (i >= ind)
+        {
+            new_array[i] = (char *) malloc(strlen(mat[i + 1]) * sizeof(char*));
+            memcpy(new_array[i], mat[i + 1], strlen(mat[i + 1]));
+            free(mat[i + 1]);
+        }
+        else
+        {
+            new_array[i] = (char *) malloc(strlen(mat[i]) * sizeof(char*));
+            memcpy(new_array[i], mat[i], strlen(mat[i]));
+            free(mat[i]);
+        }
+    }
+    free(mat);
+    mat = new_array;
+    return 0;
+}
+
 int check_socket_error(int fd)
 {
     return 0;
@@ -55,10 +98,16 @@ int get_client_ips(char **ips, unsigned int *ips_len)
         return 2;
     }
 
+    print_strings(ips, ips_len);
     for ( i = 0; i < (*ips_len); i++)
     {
-        printf("%d: %s\n", i, ips[i]);
+        if (!ping_ip(ips[i]))
+        {
+            string_matrix_remove_elem(ips, ips_len, i);
+        }
     }
+
+    print_strings(ips, ips_len);
     /* ping each client and see whether they respond.
        On success keep it, else remove */
     return 0;
