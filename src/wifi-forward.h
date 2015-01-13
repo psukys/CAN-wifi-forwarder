@@ -11,7 +11,9 @@
 
 #define BUFSIZE 512 /* max length of buffer */
 #define PORT 3000
-#define DHCP_LEASES_FILE "/var/lib/dhcp/dhcpd.leases"
+/* please uncomment the original line, as "res/dhcpd.leases" is only for testing */
+#define DHCP_LEASES_FILE "res/dhcpd.leases"
+/*#define DHCP_LEASES_FILE "/var/lib/dhcp/dhcpd.leases"*/
 /* posix regex requies backslash before curly brackets*/
 #define IP_REGEX "[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}"
 
