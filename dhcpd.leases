@@ -1,0 +1,183 @@
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.2.2
+
+lease 192.168.42.10 {
+  starts 4 2015/01/08 17:52:20;
+  ends 4 2015/01/08 18:02:20;
+  tstp 4 2015/01/08 18:02:20;
+  cltt 4 2015/01/08 17:52:20;
+  binding state free;
+  hardware ethernet 1c:af:05:3a:bc:bd;
+  uid "\001\034\257\005:\274\275";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:11:47;
+  ends 4 2015/01/08 18:21:47;
+  tstp 4 2015/01/08 18:21:47;
+  cltt 4 2015/01/08 18:11:47;
+  binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+}
+server-duid "\000\001\000\001\034\031\276d\020\376\355 \307\004";
+
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:18:21;
+  ends 4 2015/01/08 18:28:21;
+  cltt 4 2015/01/08 18:18:21;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:18:23;
+  ends 4 2015/01/08 18:28:23;
+  cltt 4 2015/01/08 18:18:23;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:18:27;
+  ends 4 2015/01/08 18:28:27;
+  cltt 4 2015/01/08 18:18:27;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:22:27;
+  ends 4 2015/01/08 18:32:27;
+  cltt 4 2015/01/08 18:22:27;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:26:07;
+  ends 4 2015/01/08 18:36:07;
+  cltt 4 2015/01/08 18:26:07;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:26:10;
+  ends 4 2015/01/08 18:36:10;
+  cltt 4 2015/01/08 18:26:10;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:30:55;
+  ends 4 2015/01/08 18:40:55;
+  cltt 4 2015/01/08 18:30:55;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:35:08;
+  ends 4 2015/01/08 18:45:08;
+  cltt 4 2015/01/08 18:35:08;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:38:55;
+  ends 4 2015/01/08 18:48:55;
+  cltt 4 2015/01/08 18:38:55;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:43:03;
+  ends 4 2015/01/08 18:53:03;
+  cltt 4 2015/01/08 18:43:03;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:47:23;
+  ends 4 2015/01/08 18:57:23;
+  cltt 4 2015/01/08 18:47:23;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:51:27;
+  ends 4 2015/01/08 19:01:27;
+  cltt 4 2015/01/08 18:51:27;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:55:36;
+  ends 4 2015/01/08 19:05:36;
+  cltt 4 2015/01/08 18:55:36;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 18:59:49;
+  ends 4 2015/01/08 19:09:49;
+  cltt 4 2015/01/08 18:59:49;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 19:04:02;
+  ends 4 2015/01/08 19:14:02;
+  cltt 4 2015/01/08 19:04:02;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+lease 192.168.42.11 {
+  starts 4 2015/01/08 19:07:58;
+  ends 4 2015/01/08 19:17:58;
+  cltt 4 2015/01/08 19:07:58;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 74:e5:0b:0b:8c:f8;
+  client-hostname "E520";
+}
+
