@@ -1,7 +1,7 @@
 import subprocess
 
 class FakeCAN:
-    def __init(self):
+    def __init__(self):
         self.data = ["can0 321 [8] 40 15 80 01 FF 60 05 60",
                      "can0 322 [8] 40 15 80 01 04 60 05 60",
                      "can0 323 [8] 40 15 80 01 04 60 05 60",
@@ -34,7 +34,7 @@ class FakeCAN:
     def next(self):
         if self.index == len(self.data):
             self.index = 0
-        next_data = self.data[self_index]
+        next_data = self.data[self.index]
         self.index += 1
         return next_data
 
@@ -54,5 +54,5 @@ class RetrieveCAN:
 
             if p == 0:
                 return True
-            else
+            else:
                 return False

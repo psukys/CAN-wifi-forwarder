@@ -5,7 +5,11 @@ import sys
 import time
 import threading
 
-class ForwardCAN:
+
+class ForwardCAN(object):
+    '''
+    Sukuria can srauto iteratorius
+    '''
     def __init__(self, port, fake):
         self.timeout = 3
         self.fake = fake
@@ -16,11 +20,13 @@ class ForwardCAN:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.port = port
             self.connect()
-        except scoket.timeout:
+        except socket.timeout:
             print "Timeout"
 
     def parse_CAN(self, line):
-        #laukiamas formatas: can0 410 [8] 0E 08 00 00 00 6D 00 00
+        '''
+        laukiamas formatas: can0 410 [8] 0E 08 00 00 00 6D 00 00
+        '''
         tokens = line.split() #tarpai dingsta
         address = tokens[1]
         dlc = tokens[2][1:-1] #ignoruojami lauztiniai skliaustai
@@ -35,6 +41,7 @@ class ForwardCAN:
             ip = None
             while ip == None:
                 ip = self.get_ip()
+                time.sleep(2)
 
             address = (ip, self.port)
             self.sock.connect(address)
@@ -45,7 +52,7 @@ class ForwardCAN:
 
     def send(self, rxcan, data_stream):
         try:
-            data = self.parse_CAN(nest(data_stream))
+            data = self.parse_CAN(next(data_stream))
             print "Sending: " + data
             self.sock.send(data) # next - iteratoriaus metodas gauti sekancius duomenis
 
@@ -90,8 +97,8 @@ class ForwardCAN:
         '''
         with open(self.leases_file) as f:
             for line in f:
-                match = re.match(self.lease_ip_regex, line, re.M|re.I)
-                if match and self.check_ip(match.grou(1))
-                print "Found active IP: " + match.grou(1)
-                return match.group(1)
+                match = re.match(self.leases_ip_regex, line, re.M|re.I)
+                if match and self.check_ip(match.group(1)):
+                    print "Found active IP: " + match.group(1)
+                    return match.group(1)
 
